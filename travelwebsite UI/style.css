@@ -1,0 +1,186 @@
+/* font-family: 'Italianno', cursive;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Kalam', cursive;
+font-family: 'Roboto', sans-serif; */
+*{
+    margin:0px;
+    padding:0px;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+}
+header {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('images/taj.jpg');
+
+    width: 100%;
+    height: 100vh;
+    background-size: cover; /* this will cover the entire viewport */
+    background-repeat: no-repeat; /* this prevents the image from repeating */
+    background-position: center top; /* this will center the background image */
+   
+}
+nav{
+    background-color:rgb(0,0,0,0.3);
+    width: 100%;
+    height:13vh;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+
+}
+nav .logo{
+    width: 25%;
+    text-align: center;
+    /* background-color:; */
+
+}
+nav .menu{
+
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+nav .menu a{
+    text-decoration: none;
+    color: white;
+    width:25%;
+}
+/* nav .menu a:hover{
+    background-color: red;
+    font-weight: bold;
+    
+} */
+.menu  a:nth-child(1){
+ 
+color: green;
+}
+
+
+main{
+    width: 100%;
+    height: 85vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   color: white;
+}
+/* section{
+
+} */
+section  h3{
+    font-size: 35px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    text-shadow:1px 1px 3px black;
+}
+section h1{
+    margin:30px 0px 20px 0px;
+    font-size:55px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow:1px 1px 3px black;
+   text-transform: uppercase;
+}
+p{
+    font-size:25px;
+    word-spacing:2px;
+    margin-bottom:25px;
+    text-shadow: 1px 1px 1px black;
+}
+section a{
+    padding: 12px 30px ;
+    border: 4px ;
+    outline:none ;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight:500px;
+    text-decoration:none;
+    letter-spacing:1px;
+
+}
+section .btn1{
+    background-color:#fff;
+    color: black;
+}
+section .btn2{
+    background-color:#6bb800;
+    color:white;
+}
+.animate__veryVerySlow {
+    --animate-duration: 3s; /* Adjust this duration as desired. */
+  }
+  .logo h1 {
+    background: -webkit-linear-gradient(top, #FF9933, #FF9933 33%, #FFFFFF 33%, #FFFFFF 66%, #138808 66%, #138808 100%);
+    background: linear-gradient(to bottom, #FF9933, #FF9933 33%, #FFFFFF 33%, #FFFFFF 66%, #138808 66%, #138808 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 30px;
+}
+.change_content::after{
+    margin-left: 4px;
+    content: '';
+    opacity: '';
+    animation: changetext 10s infinite linear;
+    
+}
+@keyframes changetext {
+    0% { 
+        content: "MUMBAI";
+        color: #1A8CFF; /* A pleasant shade of blue */
+        opacity: 0.9;
+    }
+    20% { 
+        content: "DELHI";
+        color: #FF6347; /* A vibrant shade of red/orange (tomato) */
+        opacity: 1;
+    }
+    100% { 
+        content: "PUNE"; 
+        color: #4CAF50; /* A calming shade of green */
+        opacity: 0.7;
+    }
+}
+.hamburger {
+    display: none;
+}
+/* Mobile-specific styles */
+@media (max-width: 599px) {
+    /* .menu a{
+        display: flex;
+        flex-direction: column;
+    } */
+    .menu a{
+        position: relative;
+        padding-top:9px;
+    }
+    .menu{
+       
+        display:flex;
+        flex-direction: column;
+        width: 150px;
+        /* border: 1px solid #ccc; */
+        padding: 10px;
+        position: relative;
+    left:70px;
+    }
+    .hamburger {
+        display:inline;
+        position: relative;
+        /* left:80px; */
+        float: right;
+    }
+}
+
+/* Hide hamburger menu by default in larger screens */
+/* .hamburger {
+    display: none;
+} */
+.hamburger {
+    position: relative;
+    top: 10px;  /* adjust as needed */
+    right: 3px;  /* adjust as needed */
+    cursor: pointer;
+}
